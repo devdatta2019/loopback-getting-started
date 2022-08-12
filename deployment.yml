@@ -42,5 +42,6 @@ spec:
       paths:
       - path: /testapp
         backend:
-          serviceName: testapp-service
-          servicePort: 3000
+          service:
+            name: testapp-service
+            Port: 3000
