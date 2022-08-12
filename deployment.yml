@@ -4,6 +4,9 @@ metadata:
   name: testapp-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+       app: testapp
   template:
     metadata:
       labels:
