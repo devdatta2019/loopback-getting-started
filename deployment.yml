@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: testapp
-        image: 127.0.0.1:30000/apps/testapp
+        image: gcr.io/apt-reality-357605/test@sha256:82dcf5e6eaf32d2a948f463a0499d0cc35e625f1045c069024ded4feaa6bd6c2
         ports:
         - containerPort: 3000
 ---
