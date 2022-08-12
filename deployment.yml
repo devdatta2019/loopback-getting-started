@@ -35,13 +35,15 @@ kind: Ingress
 metadata:
   name: testapp-ingress
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-      - path: /testapp
+      - path: /testpath
+        pathType: Prefix
         backend:
           service:
             name: testapp-service
-            Port: 3000
+            port:
+              number: 3000
